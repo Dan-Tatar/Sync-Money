@@ -17,6 +17,8 @@
 		109BAF3E217E4DA200FBCD11 /* ScanORViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109BAF3D217E4DA200FBCD11 /* ScanORViewController.swift */; };
 		109BAF40217E4DC700FBCD11 /* MarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109BAF3F217E4DC700FBCD11 /* MarketViewController.swift */; };
 		109BAF42217E4DEF00FBCD11 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109BAF41217E4DEF00FBCD11 /* MoreViewController.swift */; };
+		109BAF44217E627300FBCD11 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109BAF43217E627300FBCD11 /* Categories.swift */; };
+		109BAF46217E6E4600FBCD11 /* CategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109BAF45217E6E4600FBCD11 /* CategoriesCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		109BAF3D217E4DA200FBCD11 /* ScanORViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanORViewController.swift; sourceTree = "<group>"; };
 		109BAF3F217E4DC700FBCD11 /* MarketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketViewController.swift; sourceTree = "<group>"; };
 		109BAF41217E4DEF00FBCD11 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		109BAF43217E627300FBCD11 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		109BAF45217E6E4600FBCD11 /* CategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,8 @@
 				109BAF3B217E4D7700FBCD11 /* CardViewController.swift */,
 				109BAF3D217E4DA200FBCD11 /* ScanORViewController.swift */,
 				109BAF3F217E4DC700FBCD11 /* MarketViewController.swift */,
+				109BAF45217E6E4600FBCD11 /* CategoriesCell.swift */,
+				109BAF43217E627300FBCD11 /* Categories.swift */,
 				109BAF41217E4DEF00FBCD11 /* MoreViewController.swift */,
 				109BAF2E217E4B2E00FBCD11 /* Assets.xcassets */,
 				109BAF30217E4B2E00FBCD11 /* LaunchScreen.storyboard */,
@@ -154,6 +160,8 @@
 				109BAF3A217E4D2700FBCD11 /* AccountsViewController.swift in Sources */,
 				109BAF3C217E4D7700FBCD11 /* CardViewController.swift in Sources */,
 				109BAF3E217E4DA200FBCD11 /* ScanORViewController.swift in Sources */,
+				109BAF46217E6E4600FBCD11 /* CategoriesCell.swift in Sources */,
+				109BAF44217E627300FBCD11 /* Categories.swift in Sources */,
 				109BAF42217E4DEF00FBCD11 /* MoreViewController.swift in Sources */,
 				109BAF2D217E4B2600FBCD11 /* Sync_money.xcdatamodeld in Sources */,
 				109BAF40217E4DC700FBCD11 /* MarketViewController.swift in Sources */,
