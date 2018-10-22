@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ScanORViewController.swift
 //  Sync money
 //
 //  Created by Dan  Tatar on 22/10/2018.
@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ScanORViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+      view.backgroundColor = UIColor.white
     }
+    
 
 
 }
-
