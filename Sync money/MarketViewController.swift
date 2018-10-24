@@ -8,12 +8,12 @@
 
 import UIKit
 
-class MarketViewController: UITableViewController {
-    
+class MarketViewController: UIViewController {
+
     var items: [Categories] = [ Categories(name: "pick", image: #imageLiteral(resourceName: "pick")), Categories(name: "xend", image: #imageLiteral(resourceName: "xend"))]
     
     let categoryID = "CategoryId"
-    
+    var tableView: UITableView = UITableView()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,18 +23,37 @@ class MarketViewController: UITableViewController {
         navigationController?.hidesBarsOnSwipe = true
         
         view.backgroundColor = UIColor.white
-
-        
-        let titlelabel = UILabel(frame: CGRect(x: 70, y: 0, width: view.frame.width - 30, height: view.frame.height))
+        tableView.frame = CGRect(x: 0, y: 60, width: view.frame.width, height: view.frame.height)
+        let titlelabel = UILabel(frame: CGRect(x: 70, y: 0, width: view.frame.width - 70, height: view.frame.height))
         titlelabel.text = "Market"
         titlelabel.font = UIFont.systemFont(ofSize: 40)
         navigationItem.titleView = titlelabel
+        navigationController?.navigationBar.isTranslucent = false
       setupNavBarButton()
+        
+        setupMenuBar()
+    }
+    
+    let menuBar: Menubar = {
+        let nb = Menubar()
+        nb.translatesAutoresizingMaskIntoConstraints = false
+        return nb
+    }()
+    
+    func setupMenuBar() {
+
+        view.addSubview(menuBar)
+        view.addSubview(tableView)
+        menuBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0).isActive = true
+        menuBar.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
+        menuBar.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
+        menuBar.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
     func setupNavBarButton() {
         let searchImage = UIImage(named: "search")
         let searchButton = UIBarButtonItem(image: searchImage, style: .plain, target: self, action:  #selector(handleSearch))
+        searchButton.tintColor = UIColor.black
         navigationItem.rightBarButtonItem = searchButton
     }
 
@@ -43,21 +62,21 @@ class MarketViewController: UITableViewController {
     }
 }
 
-extension MarketViewController {
+extension MarketViewController: UITableViewDelegate, UITableViewDataSource {
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
     }
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: categoryID, for: indexPath) as? CategoriesCell
         cell?.setCategories(categories: items[indexPath.row])
-   
+
         return cell!
     }
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 420
     }
-    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         return nil
     }
 }

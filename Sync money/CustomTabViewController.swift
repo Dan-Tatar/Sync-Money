@@ -15,7 +15,6 @@ class CustomTabViewController: UITabBarController {
      
         view.backgroundColor = UIColor.white
         createControllers()
-        
       
     }
 
