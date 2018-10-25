@@ -53,6 +53,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		105F6E1221824A4A00898676 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				109BAF492180EDFF00FBCD11 /* MenuBarcell.swift */,
+				109BAF45217E6E4600FBCD11 /* CategoriesCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		105F6E1321824A7E00898676 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				109BAF43217E627300FBCD11 /* Categories.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		105F6E1421824A9700898676 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				109BAF26217E4B2600FBCD11 /* CustomTabViewController.swift */,
+				109BAF39217E4D2700FBCD11 /* AccountsViewController.swift */,
+				109BAF3B217E4D7700FBCD11 /* CardViewController.swift */,
+				109BAF3D217E4DA200FBCD11 /* ScanORViewController.swift */,
+				109BAF41217E4DEF00FBCD11 /* MoreViewController.swift */,
+				109BAF47217F028700FBCD11 /* MenuBar.swift */,
+				109BAF3F217E4DC700FBCD11 /* MarketViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		109BAF18217E4B2500FBCD11 = {
 			isa = PBXGroup;
 			children = (
@@ -73,16 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				109BAF24217E4B2600FBCD11 /* AppDelegate.swift */,
-				109BAF26217E4B2600FBCD11 /* CustomTabViewController.swift */,
-				109BAF39217E4D2700FBCD11 /* AccountsViewController.swift */,
-				109BAF3B217E4D7700FBCD11 /* CardViewController.swift */,
-				109BAF3D217E4DA200FBCD11 /* ScanORViewController.swift */,
-				109BAF47217F028700FBCD11 /* MenuBar.swift */,
-				109BAF492180EDFF00FBCD11 /* MenuBarcell.swift */,
-				109BAF3F217E4DC700FBCD11 /* MarketViewController.swift */,
-				109BAF45217E6E4600FBCD11 /* CategoriesCell.swift */,
-				109BAF43217E627300FBCD11 /* Categories.swift */,
-				109BAF41217E4DEF00FBCD11 /* MoreViewController.swift */,
+				105F6E1421824A9700898676 /* Controller */,
+				105F6E1321824A7E00898676 /* Model */,
+				105F6E1221824A4A00898676 /* View */,
 				109BAF2E217E4B2E00FBCD11 /* Assets.xcassets */,
 				109BAF30217E4B2E00FBCD11 /* LaunchScreen.storyboard */,
 				109BAF33217E4B2E00FBCD11 /* Info.plist */,

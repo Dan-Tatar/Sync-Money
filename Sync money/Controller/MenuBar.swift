@@ -14,12 +14,19 @@ class Menubar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
     var names = ["Money Transfer", "Insurance", "Credits", " Loans"]
     
     let cellMenuBar = "cellMenuBar"
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-
+        
         backgroundColor = UIColor(displayP3Red: 253/255, green: 253/255, blue: 253/255, alpha: 1)
         collectionView.register(MenuBarCell.self, forCellWithReuseIdentifier: cellMenuBar)
         setupViews()
+        
+        preselectFirstitem()
+        
+    }
+    //Func that preselects first item in the collection view
+    func preselectFirstitem() {
         
         let selectedIndexPath = IndexPath(item: 0, section: 0)
         collectionView.selectItem(at: selectedIndexPath , animated: false, scrollPosition: .bottom)
@@ -48,13 +55,12 @@ class Menubar: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UIC
         collectionView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 7).isActive = true
         collectionView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: 0).isActive = true
         collectionView.heightAnchor.constraint(equalToConstant: 60).isActive = true
-    
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return names.count
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 145, height: frame.height)

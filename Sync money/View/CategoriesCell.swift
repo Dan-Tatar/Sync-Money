@@ -40,7 +40,7 @@ class CategoriesCell: UITableViewCell {
         
         marketImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10).isActive = true
         marketImageView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 15).isActive = true
-        marketImageView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -10).isActive = true
+        marketImageView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -15).isActive = true
         marketImageView.heightAnchor.constraint(equalToConstant: 400).isActive = true
     }
     
